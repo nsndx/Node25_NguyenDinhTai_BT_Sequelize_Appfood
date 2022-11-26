@@ -1,0 +1,211 @@
+{
+	"info": {
+		"_postman_id": "a5f62777-9a9f-455c-b8db-9a5f74b137dc",
+		"name": "Node25_NguyenDInhTai_BT_sequelize",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "23745965"
+	},
+	"item": [
+		{
+			"name": "users",
+			"item": [
+				{
+					"name": "getListLikeResOfUserID",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{domain}}/api/users/getListLikeResOfUserID/1",
+							"host": [
+								"{{domain}}"
+							],
+							"path": [
+								"api",
+								"users",
+								"getListLikeResOfUserID",
+								"1"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "getListRateResOfUserID",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{domain}}/api/users/getListRateResOfUserID/1",
+							"host": [
+								"{{domain}}"
+							],
+							"path": [
+								"api",
+								"users",
+								"getListRateResOfUserID",
+								"1"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "postLikeUnlikeRes",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"user_id\": 1,\r\n    \"res_id\": 1,\r\n    \"date_like\": \"2022-11-25 00:00:00\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{domain}}/api/users/likeUnlikeRes",
+							"host": [
+								"{{domain}}"
+							],
+							"path": [
+								"api",
+								"users",
+								"likeUnlikeRes"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "postRateRes",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"user_id\": 1,\r\n    \"res_id\": 1,\r\n    \"amount\": 5,\r\n    \"date_rate\": \"2022-11-25 00:00:00\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{domain}}/api/users/rateRes",
+							"host": [
+								"{{domain}}"
+							],
+							"path": [
+								"api",
+								"users",
+								"rateRes"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "postOrder",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"user_id\": 1,\r\n    \"food_id\": 1,\r\n    \"amount\": 5,\r\n    \"code\": \"\",\r\n    \"arr_sub_id\":\"[1,2]\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{domain}}/api/users/order",
+							"host": [
+								"{{domain}}"
+							],
+							"path": [
+								"api",
+								"users",
+								"order"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "restaurants",
+			"item": [
+				{
+					"name": "getListUserLikeOfResID",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{domain}}/api/res/getListUserLikeOfResID/1",
+							"host": [
+								"{{domain}}"
+							],
+							"path": [
+								"api",
+								"res",
+								"getListUserLikeOfResID",
+								"1"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "getListUserRateOfResID",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{domain}}/api/res/getListUserRateOfResID/1",
+							"host": [
+								"{{domain}}"
+							],
+							"path": [
+								"api",
+								"res",
+								"getListUserRateOfResID",
+								"1"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		}
+	],
+	"event": [
+		{
+			"listen": "prerequest",
+			"script": {
+				"type": "text/javascript",
+				"exec": [
+					""
+				]
+			}
+		},
+		{
+			"listen": "test",
+			"script": {
+				"type": "text/javascript",
+				"exec": [
+					""
+				]
+			}
+		}
+	],
+	"variable": [
+		{
+			"key": "domain",
+			"value": "localhost:3080",
+			"type": "string"
+		}
+	]
+}
